@@ -38,10 +38,13 @@ var Btn = React.createClass({displayName: 'Btn',
 module.exports = Btn;
 
 },{"react":148}],2:[function(require,module,exports){
-var React = window.React = require('react');
+var React = require('react');
 var Btn = require('./Btn.jsx');
 
-React.render(React.createElement(Btn, {title: "Our cool button"}), document.body);
+// React.render(<Btn title="Our cool button" />, document.body);
+
+var str = React.renderToString(React.createElement(Btn, {title: "Our cool button"}));
+console.log(str);
 
 },{"./Btn.jsx":1,"react":148}],3:[function(require,module,exports){
 /**
